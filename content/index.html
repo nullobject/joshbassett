@@ -1,7 +1,13 @@
 ---
-title: Home
+title: Josh was 'ere
 ---
 
-<h1>Josh was 'ere</h1>
-
 <p>The life and times of Josh Bassett.</p>
+
+<h2>Recent Articles</h2>
+
+<ul id="articles">
+  <% sorted_articles.each do |article| %>
+    <li><%= link_to(article[:title], article) %></li>
+  <% end %>
+</ul>
