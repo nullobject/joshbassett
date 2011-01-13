@@ -22,6 +22,11 @@ compile %r(^/(images|javascripts)/.*/$) do
   # Don't filter or layout.
 end
 
+compile '/*/' do
+  filter :bluecloth
+  layout 'default'
+end
+
 compile '*' do
   filter :erb
   layout 'default'
