@@ -1,0 +1,33 @@
+.coderay {
+  background-color: #232323;
+  border: 1px solid black;
+  font-family: "Courier New", "Terminal", monospace;
+  color: #e6e0db;
+  padding: 3px 5px;
+  overflow: hidden;
+  margin: 12px 0;
+
+  pre {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .an { color: #e7be69 }                      /* html attribute */
+  .c  { color: #bc9358; font-style: italic; } /* comment */
+  .ch { color: #509e4f }                      /* escaped character */
+  .cl { color: #fff }                         /* class */
+  .co { color: #fff }                         /* constant */
+  .fl { color: #a4c260 }                      /* float */
+  .fu { color: #ffc56d }                      /* function */
+  .gv { color: #d0cffe }                      /* global variable */
+  .i  { color: #a4c260 }                      /* integer */
+  .il { background: #151515 }                 /* inline code */
+  .iv { color: #d0cffe }                      /* instance variable */
+  .pp { color: #e7be69 }                      /* doctype */
+  .r  { color: #cb7832 }                      /* keyword */
+  .rx { color: #a4c260 }                      /* regex */
+  .s  { color: #a4c260 }                      /* string */
+  .sy { color: #6c9cbd }                      /* symbol */
+  .ta { color: #e7be69 }                      /* html tag */
+  .pc { color: #6c9cbd }                      /* boolean */
+}
