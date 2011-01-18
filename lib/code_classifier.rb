@@ -1,3 +1,4 @@
+# A nanoc filter which pre-processes a code block for a language tag.
 class CodeClassifierFilter < Nanoc3::Filter
   require 'nokogiri'
 
