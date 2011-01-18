@@ -6,7 +6,7 @@ body {
   //font-family: "museo-slab-1", "museo-slab-2", serif;
   font-family: "chaparral-pro-1", "chaparral-pro-2", sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 16px;
   background: #fff;
 }
 
@@ -15,6 +15,18 @@ h1 {
   line-height: 1em;
   margin-top: 0;
   margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.1667em;
+  line-height: 1.286em;
+  margin-top: 1.286em;
+  margin-bottom: 1.286em;
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 p {
@@ -28,4 +40,6 @@ p {
   @if $debug {
     @include showgrid;
   }
+
+  margin-top: 1.5em;
 }
