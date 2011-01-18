@@ -1,10 +1,11 @@
 @import "base";
+@import "coderay";
 
 body {
   //font-family: "minion-pro-1", "minion-pro-2", serif;
   //font-family: "ltc-bodoni-175-1", "ltc-bodoni-175-2", serif;
-  //font-family: "museo-slab-1", "museo-slab-2", serif;
-  font-family: "chaparral-pro-1", "chaparral-pro-2", sans-serif;
+  font-family: "museo-slab-1", "museo-slab-2", serif;
+  //font-family: "chaparral-pro-1", "chaparral-pro-2", sans-serif;
   font-weight: 300;
   font-size: 16px;
   background: #fff;
@@ -41,5 +42,15 @@ p {
     @include showgrid;
   }
 
+  overflow: visible;
   margin-top: 1.5em;
+}
+
+.coderay {
+  border: 1px solid black;
+  font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
+  font-size: 12px;
+  padding: 1.5em;
+  margin: 12px 0;
+  overflow: hidden;
 }
