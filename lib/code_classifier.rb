@@ -1,7 +1,7 @@
-class CodeCleanupFilter < Nanoc3::Filter
+class CodeClassifierFilter < Nanoc3::Filter
   require 'nokogiri'
 
-  identifier :code_cleanup
+  identifier :code_classifier
   type :text
 
   def run(content, params = {})
