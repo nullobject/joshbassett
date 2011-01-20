@@ -47,10 +47,16 @@ p {
   text-align: justify;
 }
 
-.coderay {
-  font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
-  font-size: 12px;
-  padding: 1.5em;
-  margin: 12px 0;
-  overflow: hidden;
+figure {
+  pre.coderay {
+    font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
+    font-size: 12px;
+    padding: 1.5em;
+    margin: 12px 0;
+    overflow: hidden;
+  }
+
+  figcaption {
+    color: silver;
+  }
 }

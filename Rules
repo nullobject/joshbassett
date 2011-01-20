@@ -24,7 +24,7 @@ end
 
 compile '/*/' do
   filter :bluecloth
-  filter :code_classifier
+  filter :code_classifier, :pre_class => "coderay"
   filter :colorize_syntax, :colorizers => {:ruby => :coderay}, :coderay => {:line_numbers => nil}
   layout 'article'
 end

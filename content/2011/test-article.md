@@ -8,7 +8,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, accums
 
 # Rules
 
-    @language-ruby
+    [@language="ruby"]
+    [@caption="Listting 1: the rules file"]
 
     Compass.add_project_configuration('config/compass.rb')
 
