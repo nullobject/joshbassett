@@ -1,23 +1,23 @@
 .coderay {
-  background-color: white;
-  color: black;
+  background-color: #272822;
+  color: #F8F8F2;
 
-  .an { color: #e7be69 }                      /* html attribute */
-  .c  { color: #bc9358; font-style: italic; } /* comment */
-  .ch { color: #509e4f }                      /* escaped character */
-  .cl { color: #fff }                         /* class */
-  .co { color: #fff }                         /* constant */
-  .fl { color: #a4c260 }                      /* float */
-  .fu { color: #ffc56d }                      /* function */
-  .gv { color: #d0cffe }                      /* global variable */
-  .i  { color: #a4c260 }                      /* integer */
-  .il { background: #151515 }                 /* inline code */
-  .iv { color: #d0cffe }                      /* instance variable */
-  .pp { color: #e7be69 }                      /* doctype */
-  .r  { color: #cb7832 }                      /* keyword */
-  .rx { color: #a4c260 }                      /* regex */
-  .s  { color: #a4c260 }                      /* string */
-  .sy { color: #6c9cbd }                      /* symbol */
-  .ta { color: #e7be69 }                      /* html tag */
-  .pc { color: #6c9cbd }                      /* boolean */
+  .an { color: #e7be69; }                      /* html attribute */
+  .c  { color: #75715E; } /* comment */
+  .ch { color: #509e4f; }                      /* escaped character */
+  .cl { color: #A6E22E; }                         /* class */
+  .co { color: #AE81FF; }                         /* constant */
+  .fl { color: #AE81FF; }                      /* float */
+  .fu { color: #A6E22E; }                      /* function */
+  .gv { color: #d0cffe; }                      /* global variable */
+  .i  { color: #AE81FF; }                      /* integer */
+  .il { background-color: #151515; }                 /* inline code */
+  .iv { color: #d0cffe; }                      /* instance variable */
+  .pp { color: #e7be69; }                      /* doctype */
+  .r  { color: #F92672; }                      /* keyword */
+  .rx { color: #a4c260; }                      /* regex */
+  .s  { color: #E6DB74; }                      /* string */
+  .sy { color: #6c9cbd; }                      /* symbol */
+  .ta { color: #e7be69; }                      /* html tag */
+  .pc { color: #6c9cbd; }                      /* boolean */
 }

@@ -1,5 +1,6 @@
 ---
 title: Test Article
+kind: article
 created_at: 2011-01-14
 ---
 
