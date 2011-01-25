@@ -24,6 +24,7 @@ end
 
 compile '/*/' do
   filter :bluecloth
+  filter :rubypants
   filter :code_classifier, :pre => {:class => "coderay"}, :caption => {:position => :top}
   filter :colorize_syntax
   layout 'article'

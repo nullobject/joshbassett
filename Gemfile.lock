@@ -17,6 +17,7 @@ GEM
       cri (>= 1.0.0)
     nokogiri (1.4.4)
     rack (1.2.1)
+    rubypants (0.2.0)
 
 PLATFORMS
   ruby
@@ -30,3 +31,4 @@ DEPENDENCIES
   nanoc (~> 3.1.6)
   nanoc-code-classifier (= 0.0.4)
   rack (~> 1.2.1)
+  rubypants (~> 0.2.0)
