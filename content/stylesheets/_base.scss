@@ -3,7 +3,7 @@ $blueprint-grid-width:    27px;
 $blueprint-grid-margin:   5px;
 $font-color:              #333;
 
-$debug: false;
+$debug: true;
 
 @import "blueprint/debug";
 @import "blueprint/grid";
