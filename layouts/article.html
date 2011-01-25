@@ -6,7 +6,7 @@
     <meta name="description" content="The life and times of Josh Bassett." />
     <meta name="keywords" content="josh, bassett, ruby, rails, programmer, blog" />
 
-    <title><%= @item[:title] %></title>
+    <title><%= @item[:title] %> &mdash; Josh Bassett</title>
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" media="screen" />
 
@@ -33,7 +33,9 @@
     <div id="content">
       <header>
         <h1><%= @item[:title] %></h1>
-        <p class="created-at">Published <time><%= @item[:created_at] %></time></p>
+        <section id="meta">
+          <p>Published <time><%= @item[:created_at] %></time></p>
+        </section>
       </header>
 
       <%= yield %>
