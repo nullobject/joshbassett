@@ -62,6 +62,6 @@ figure {
     background-color: silver;
     color: white;
     padding: 0.25em 0.5em;
-    @include border-radius(4px)
+    @include border-radius(4px);
   }
 }
