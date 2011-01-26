@@ -30,17 +30,18 @@
     </script>
   </head>
   <body>
-    <div id="content">
+    <section id="content">
       <header>
         <h1><%= @item[:title] %></h1>
         <section id="meta">
-          <p>Published <time><%= @item[:created_at] %></time></p>
+          <p><time datetime="<%= @item[:created_at].to_s(:iso8331) %>"><%= @item[:created_at].to_s(:long_ordinal) %></time></p>
         </section>
       </header>
 
       <%= yield %>
 
       <div id="disqus_thread"></div>
+
       <script type="text/javascript">
         var disqus_shortname = 'joshbassett';
 
@@ -55,12 +56,10 @@
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
       <footer>
         <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
       </footer>
-    </div>
+    </section>
   </body>
 </html>

@@ -1,12 +1,14 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (3.0.3)
     bluecloth (2.0.9)
     coderay (0.9.6)
     compass (0.10.6)
       haml (>= 3.0.4)
     cri (1.0.1)
     haml (3.0.25)
+    i18n (0.5.0)
     mime-types (1.16)
     nanoc (3.1.6)
       nanoc3 (>= 3.1.6)
@@ -23,10 +25,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 3.0.3)
   bluecloth (~> 2.0.9)
   coderay (~> 0.9.6)
   compass (~> 0.10.6)
   haml (~> 3.0.25)
+  i18n
   mime-types (~> 1.16)
   nanoc (~> 3.1.6)
   nanoc-code-classifier (= 0.0.4)
