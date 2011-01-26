@@ -15,7 +15,6 @@ My criteria for choosing a templating system was:
 1. static site generation
 2. ability to write articles in markdown
 3. syntax highlighting of code
-4. some shit
 
 Nanoc offered the most flexibility at the cost of some added complexiting in the initial configuration. It's plugin system allowed me to choose only the components that I needed. It didn't however solve the problem of syntax highlighting the code blocks embedded in my markdown. If I was willing to write my articles in HTML it would work out of the box, but this was not a sacrifice I wanted to make. This called for a custom nanoc filter.
 

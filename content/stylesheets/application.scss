@@ -2,13 +2,15 @@
 @import "coderay";
 
 body {
-  font-family: "minion-pro-1", "minion-pro-2", serif;
-  //font-family: "ltc-bodoni-175-1", "ltc-bodoni-175-2", serif;
-  //font-family: "museo-slab-1", "museo-slab-2", serif;
-  //font-family: "chaparral-pro-1", "chaparral-pro-2", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  background: #fff;
+  font-family: "adobe-garamond-pro-1", "adobe-garamond-pro-2", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: $font-color;
+}
+
+h1, h2, h3 {
+  font-family: "museo-slab-1", "museo-slab-2", serif;
+  //font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
 }
 
 h1 {
@@ -45,6 +47,18 @@ ul, ol {
   }
 }
 
+a {
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: blue;
+  }
+
+  &:hover {
+    border-bottom: 1px solid blue;
+  }
+}
+
 ol {
   list-style-type: decimal;
 }
@@ -68,21 +82,30 @@ ol {
   }*/
 }
 
-p code, figure {
-  font-family: monospace;
+#meta time {
+  font-style: italic;
+}
+
+p > code, figure {
+  font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
+  font-size: 0.8em;
+  line-height: 1.5em;
 }
 
 figure {
   pre.coderay {
-    padding: 1em;
-    margin-bottom: 1.5em;
+    border: 1px solid #eee;
+    padding: 0.5em 1em;
+    margin: 0.75em 0;
+    margin-top: 0.25em;
     overflow: hidden;
   }
 
   figcaption {
-    background-color: silver;
+    background-color: #ccc;
     color: white;
-    padding: 0.25em 0.5em;
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
     @include border-radius(4px);
   }
 }
