@@ -51,11 +51,11 @@ a {
   text-decoration: none;
 
   &:link, &:visited {
-    color: blue;
+    color: red;
   }
 
   &:hover {
-    border-bottom: 1px solid blue;
+    text-decoration: underline;
   }
 }
 
@@ -108,4 +108,12 @@ figure {
     padding: 0.2em 0.4em;
     @include border-radius(4px);
   }
+}
+
+#josh-bassett {
+  font-size: 48px;
+}
+
+#tagline {
+  font-style: italic;
 }
