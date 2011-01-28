@@ -1,11 +1,66 @@
----
-title: Josh was 'ere
----
+<!DOCTYPE HTML>
+<html lang="en-au">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Josh Bassett" />
+    <meta name="description" content="The life and times of Josh Bassett." />
+    <meta name="keywords" content="josh, bassett, ruby, rails, programmer, blog" />
 
-<h2>Recent Articles</h2>
+    <title>Josh Bassett</title>
 
-<ul id="articles">
-  <% sorted_articles.each do |article| %>
-    <li><%= link_to(article[:title], article) %></li>
-  <% end %>
-</ul>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" media="screen" />
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="/javascripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.lettering-0.6.1.min.js"></script>
+    <script type="text/javascript" src="http://use.typekit.com/ggn1xar.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#content > header > h1").lettering();
+      });
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20723605-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body id="home">
+    <section id="content">
+      <div id="left">
+        <header>
+          <h1>Josh Bassett</h1>
+        </header>
+
+        <section id="articles">
+          <h2>Recent Articles</h2>
+          <ul>
+            <% sorted_articles.each do |article| %>
+              <li><%= link_to(article[:title], article) %></li>
+            <% end %>
+          </ul>
+        </section>
+      </div>
+
+      <div id="right">
+        <img src="/images/HB040L.jpg" width="300" height="450" />
+      </div>
+
+      <footer>
+        <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
+      </footer>
+    </section>
+  </body>
+</html>

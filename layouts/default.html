@@ -6,7 +6,7 @@
     <meta name="description" content="The life and times of Josh Bassett." />
     <meta name="keywords" content="josh, bassett, ruby, rails, programmer, blog" />
 
-    <title>Josh Bassett</title>
+    <title><%= @item[:title] %> &mdash; Josh Bassett</title>
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" media="screen" />
 
@@ -14,16 +14,8 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="/javascripts/jquery-1.4.4.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.lettering-0.6.1.min.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/ggn1xar.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#content > header > h1").lettering();
-      });
-    </script>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -40,11 +32,30 @@
   <body>
     <section id="content">
       <header>
-        <h1 id="josh-bassett">Josh Bassett</h1>
-        <p id="tagline">The life and times of Josh Bassett</p>
+        <h1><%= @item[:title] %></h1>
+        <section id="meta">
+          <p><time datetime="<%= @item[:created_at].to_s(:iso8331) %>"><%= @item[:created_at].to_s(:long_ordinal) %></time></p>
+        </section>
       </header>
 
       <%= yield %>
+
+      <div id="disqus_thread"></div>
+
+      <script type="text/javascript">
+        var disqus_shortname = 'joshbassett';
+
+        // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        // var disqus_identifier = 'unique_dynamic_id_1234';
+        // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
 
       <footer>
         <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
