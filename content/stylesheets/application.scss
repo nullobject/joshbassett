@@ -2,10 +2,26 @@
 @import "coderay";
 
 body {
+  @include container;
+
+  @if $debug {
+    @include showgrid;
+  }
+
+  color: $font-color;
   font-family: "adobe-garamond-pro-1", "adobe-garamond-pro-2", serif;
   font-size: 18px;
   font-weight: 400;
-  color: $font-color;
+  margin: 3em auto;
+  overflow: visible;
+  text-align: justify;
+
+  & > footer {
+    color: silver;
+    font-size: 0.75em;
+    text-align: center;
+    @include column(24);
+  }
 }
 
 h1, h2, h3 {
@@ -61,25 +77,6 @@ a {
 
 ol {
   list-style-type: decimal;
-}
-
-#content {
-  @include container;
-
-  @if $debug {
-    @include showgrid;
-  }
-
-  margin: 3em auto;
-  overflow: visible;
-  text-align: justify;
-
-  & > footer {
-    color: silver;
-    font-size: 0.75em;
-    text-align: center;
-    @include column(24);
-  }
 }
 
 #left {

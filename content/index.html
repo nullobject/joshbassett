@@ -38,29 +38,27 @@
     </script>
   </head>
   <body id="home">
-    <section id="content">
-      <div id="left">
-        <header>
-          <h1>Josh Bassett</h1>
-        </header>
+    <div id="left">
+      <header>
+        <h1>Josh Bassett</h1>
+      </header>
 
-        <section id="articles">
-          <h2>Recent Articles</h2>
-          <ul>
-            <% sorted_articles.each do |article| %>
-              <li><%= link_to(article[:title], article) %></li>
-            <% end %>
-          </ul>
-        </section>
-      </div>
+      <section id="articles">
+        <h2>Recent Articles</h2>
+        <ul>
+          <% sorted_articles.each do |article| %>
+            <li><%= link_to(article[:title], article) %></li>
+          <% end %>
+        </ul>
+      </section>
+    </div>
 
-      <div id="right">
-        <img src="/images/HB040L.jpg" width="300" height="450" />
-      </div>
+    <div id="right">
+      <img src="/images/HB040L.jpg" width="300" height="450" />
+    </div>
 
-      <footer>
-        <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
-      </footer>
-    </section>
+    <footer>
+      <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
+    </footer>
   </body>
 </html>

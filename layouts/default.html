@@ -30,36 +30,34 @@
     </script>
   </head>
   <body>
-    <section id="content">
-      <header>
-        <h1><%= @item[:title] %></h1>
-        <section id="meta">
-          <p><time datetime="<%= @item[:created_at].to_s(:iso8331) %>"><%= @item[:created_at].to_s(:long_ordinal) %></time></p>
-        </section>
-      </header>
+    <header>
+      <h1><%= @item[:title] %></h1>
+      <section id="meta">
+        <p><time datetime="<%= @item[:created_at].to_s(:iso8331) %>"><%= @item[:created_at].to_s(:long_ordinal) %></time></p>
+      </section>
+    </header>
 
-      <%= yield %>
+    <%= yield %>
 
-      <div id="disqus_thread"></div>
+    <div id="disqus_thread"></div>
 
-      <script type="text/javascript">
-        var disqus_shortname = 'joshbassett';
+    <script type="text/javascript">
+      var disqus_shortname = 'joshbassett';
 
-        // The following are highly recommended additional parameters. Remove the slashes in front to use.
-        // var disqus_identifier = 'unique_dynamic_id_1234';
-        // var disqus_url = 'http://example.com/permalink-to-page.html';
+      // The following are highly recommended additional parameters. Remove the slashes in front to use.
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      // var disqus_url = 'http://example.com/permalink-to-page.html';
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
 
-      <footer>
-        <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
-      </footer>
-    </section>
+    <footer>
+      <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
+    </footer>
   </body>
 </html>
