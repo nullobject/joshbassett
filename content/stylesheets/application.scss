@@ -1,6 +1,10 @@
 @import "base";
 @import "coderay";
 
+header, footer, nav, section, article, aside {
+  display: block;
+}
+
 body {
   @include container;
 
@@ -32,6 +36,7 @@ a img {
 
 h1, h2, h3 {
   font-family: "museo-slab-1", "museo-slab-2", serif;
+  font-weight: 300;
 }
 
 h1 {
@@ -91,10 +96,6 @@ ol {
   @include column(12, true);
 }
 
-#meta time {
-  font-style: italic;
-}
-
 p > code, figure {
   font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
   font-size: 0.7em;
@@ -121,9 +122,13 @@ figure {
 
 body#home {
   h1 {
-    font-size: 56px;
-    font-weight: 600;
+    font-size: 64px;
+    font-weight: 700;
     margin: 0;
+
+    .char2 {
+      margin-left: -3px;
+    }
   }
 
   aside {
@@ -147,13 +152,37 @@ body#article {
       font-size: smaller;
       position: relative;
       left: -70px;
+      top: -20px;
     }
   }
 
   article {
+    header {
+      @include clearfix;
+
+      #meta {
+        float: right;
+        font-style: italic;
+
+        p { margin: 0; }
+      }
+    }
+
     aside {
       float: right;
       margin-left: 1.5em;
+    }
+
+    // Uppercase the first two words of the first paragraph.
+    .word1, .word2 {
+      text-transform: uppercase;
+    }
+
+    // Double the font size of the first letter of the first word.
+    .word1 .char1 {
+      font-size: 2em;
+      line-height: 0.5em;
+      margin-right: 0.0625em;
     }
   }
 }
