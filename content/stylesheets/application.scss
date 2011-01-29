@@ -12,9 +12,11 @@ body {
   font-family: "adobe-garamond-pro-1", "adobe-garamond-pro-2", serif;
   font-size: 18px;
   font-weight: 400;
-  margin: 3em auto;
+  margin: 2em auto;
   overflow: visible;
   text-align: justify;
+  text-rendering: optimizeLegibility;
+  //-webkit-font-smoothing: antialiased;
 
   & > footer {
     color: silver;
@@ -26,7 +28,6 @@ body {
 
 h1, h2, h3 {
   font-family: "museo-slab-1", "museo-slab-2", serif;
-  //font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
 }
 
 h1 {
@@ -64,14 +65,13 @@ ul, ol {
 }
 
 a {
+  color: $link-color;
+  border-bottom: 2px solid transparent;
   text-decoration: none;
-
-  &:link, &:visited {
-    color: red;
-  }
+  @include transition(border, 0.25s, ease-in);
 
   &:hover {
-    text-decoration: underline;
+    border-bottom: 2px solid $link-color;
   }
 }
 
@@ -116,15 +116,21 @@ figure {
 }
 
 body#home {
-  #left > header {
-    h1 {
-      font-size: 56px;
-      font-weight: 600;
-      margin: 0;
-    }
+  h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  aside {
+    float: right;
+  }
+
+  #bio {
+    font-style: italic;
   }
 
   #articles ul {
-    margin: 0;
+    margin-left: 0;
   }
 }

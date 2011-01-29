@@ -38,24 +38,26 @@
     </script>
   </head>
   <body id="home">
-    <div id="left">
-      <header>
-        <h1>Josh Bassett</h1>
-      </header>
+    <aside>
+      <img src="/images/maquette.png" />
+    </aside>
 
-      <section id="articles">
-        <h2>Recent Articles</h2>
-        <ul>
-          <% sorted_articles.each do |article| %>
-            <li><%= link_to(article[:title], article) %></li>
-          <% end %>
-        </ul>
-      </section>
-    </div>
+    <header>
+      <h1>Josh Bassett</h1>
+    </header>
 
-    <div id="right">
-      <img src="/images/HB040L.jpg" width="300" height="450" />
-    </div>
+    <section id="bio">
+      <p>Hello. I'm a Ruby developer living in Melbourne, Australia.</p>
+    </section>
+
+    <section id="articles">
+      <h2>Recent Articles</h2>
+      <ul>
+        <% sorted_articles.each do |article| %>
+          <li><%= link_to(article[:title], article) %></li>
+        <% end %>
+      </ul>
+    </section>
 
     <footer>
       <p>Copyright © <%= Date.today.year %> Joshua Bassett.</p>
