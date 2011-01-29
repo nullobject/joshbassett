@@ -29,15 +29,21 @@
       })();
     </script>
   </head>
-  <body>
-    <header>
-      <h1><%= @item[:title] %></h1>
-      <section id="meta">
-        <p><time datetime="<%= @item[:created_at].to_s(:iso8331) %>"><%= @item[:created_at].to_s(:long_ordinal) %></time></p>
-      </section>
-    </header>
+  <body id="article">
+    <nav>
+      <a href="/" id="home"><img src="/images/maquette-small.png" /></a>
+    </nav>
 
-    <%= yield %>
+    <article>
+      <header>
+        <h1><%= @item[:title] %></h1>
+        <section id="meta">
+          <p><time datetime="<%= @item[:created_at].to_s(:iso8331) %>"><%= @item[:created_at].to_s(:long_ordinal) %></time></p>
+        </section>
+      </header>
+
+      <%= yield %>
+    </article>
 
     <div id="disqus_thread"></div>
 

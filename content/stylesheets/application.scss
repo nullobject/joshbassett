@@ -26,6 +26,10 @@ body {
   }
 }
 
+a img {
+  border: none;
+}
+
 h1, h2, h3 {
   font-family: "museo-slab-1", "museo-slab-2", serif;
 }
@@ -132,5 +136,24 @@ body#home {
 
   #articles ul {
     margin-left: 0;
+  }
+}
+
+body#article {
+  & > nav {
+    position: absolute;
+
+    a {
+      font-size: smaller;
+      position: relative;
+      left: -70px;
+    }
+  }
+
+  article {
+    aside {
+      float: right;
+      margin-left: 1.5em;
+    }
   }
 }
