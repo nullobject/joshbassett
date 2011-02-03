@@ -1,7 +1,7 @@
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-text_extensions: ['css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml']
+text_extensions: ['atom', 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml']
 
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
@@ -45,6 +45,13 @@ data_sources:
     config:
       allow_periods_in_identifiers: true
 
+# Deploy config.
 deploy:
   default:
     dst: "josh@joshbassett.info:/home/josh/public_html"
+
+# ATOM feed config.
+base_url:    "http://joshbassett.info"
+title:       "The life and times of Josh Bassett"
+author_name: "Josh Bassett"
+author_uri:  "http://joshbassett.info/"

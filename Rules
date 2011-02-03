@@ -14,6 +14,10 @@ require 'compass'
 
 Compass.add_project_configuration('config/compass.rb')
 
+compile '/articles/' do
+  filter :erb
+end
+
 compile '/stylesheets/*/' do
   filter :sass, Compass.sass_engine_options
 end
@@ -32,6 +36,10 @@ end
 
 compile '*' do
   filter :erb
+end
+
+route '/articles/' do
+  '/articles.atom'
 end
 
 route '/stylesheets/_*/' do
