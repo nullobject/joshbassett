@@ -22,7 +22,7 @@ compile '/stylesheets/*/' do
   filter :sass, Compass.sass_engine_options
 end
 
-compile %r(^/(images|javascripts)/.*/$) do
+compile %r(/(images|javascripts)/.*/$) do
   # Don't filter or layout.
 end
 
@@ -50,7 +50,7 @@ route '/stylesheets/*/' do
   item.identifier.chop + '.css'
 end
 
-route %r(^/(images|javascripts)/.*/$) do
+route %r(/(images|javascripts)/.*/$) do
   item.identifier.chop + "." + item[:extension]
 end
 
