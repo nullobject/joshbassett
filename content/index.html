@@ -47,11 +47,14 @@
 
     <section id="articles">
       <h2>Recent Articles</h2>
-      <ul>
-        <% sorted_articles.each do |article| %>
-          <li><%= link_to(article[:title], article) %></li>
-        <% end %>
-      </ul>
+      <% articles_by_year_month.each do |(year, month), grouped_articles| %>
+        <h3><%= Date::MONTHNAMES[month] %> <%= year %></h3>
+        <ul>
+          <% grouped_articles.each do |article| %>
+            <li><%= link_to(article[:title], article) %></li>
+          <% end %>
+        </ul>
+      <% end %>
     </section>
 
     <footer>
