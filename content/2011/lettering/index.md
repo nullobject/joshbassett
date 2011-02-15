@@ -1,6 +1,5 @@
 ---
 title: Lettering.js
-kind: article
 created_at: 2011-01-31
 ---
 
