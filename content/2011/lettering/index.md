@@ -20,7 +20,6 @@ I'm going to show you the ropes, we'll be using this HTML snippet throughout the
       <p>Proin elementum erat id mi aliquam ac fermentum sem sollicitudin.</p>
     </article>
 
-
 ## Character lettering
 
 Sometimes you need to-the-letter control over a piece of text. Maybe you want to adjust the kerning of a heading, or colour each letter differently.
@@ -47,7 +46,6 @@ The contents of the `h1` element will be split into characters:
       </h1>
       ...
     </article>
-
 
 ## Word lettering
 
@@ -79,7 +77,6 @@ The contents of each `p` element will be split into words:
         <span class="word3">sollicitudin.</span>
       </p>
     </article>
-
 
 ## XY crazy shit
 

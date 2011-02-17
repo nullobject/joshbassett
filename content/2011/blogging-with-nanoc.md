@@ -8,7 +8,6 @@ One of my new year's resolutions was to write a blog. The very page you are read
 
 As a programmer, I had to strongly resist the urge to write my own blogging engine (a trap which I had fallen into in the past). Instead I decided to use [nanoc](http://nanoc.stoneship.org/) to generate my blog as a static web site. That way there would be no temptation to procrastinate by reinventing a blogging engine, instead of writing actual blog articles. This was the theory anyway...
 
-
 ## Close but no cigar
 
 My criteria for choosing a templating system was:
@@ -18,7 +17,6 @@ My criteria for choosing a templating system was:
 3. code block syntax highlighting
 
 There are a number of static site generators out there, but nanoc offered the most flexibility at the cost of some added complexity in the initial configuration. It's plugin system allowed me to choose only the components that I needed, it didn't however solve the problem of syntax highlighting the code blocks embedded in my Markdown. This called for a custom nanoc filter.
-
 
 ## Some customisation
 
@@ -37,7 +35,6 @@ The following example demonstrates how to use tags to create a Ruby code block i
         [@caption="hello_world.rb"]
 
         puts "hello world"
-
 
 ## Configuring nanoc
 
