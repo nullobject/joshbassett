@@ -77,7 +77,7 @@ a {
   color: $link-color;
   border-bottom: 2px solid transparent;
   text-decoration: none;
-  @include transition(border, 0.25s, ease-in);
+  @include transition(border 0.25s ease-in);
 
   &:hover {
     border-bottom: 2px solid $link-color;
