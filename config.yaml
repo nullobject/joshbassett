@@ -48,6 +48,7 @@ data_sources:
 # Deploy config.
 deploy:
   default:
+    kind: rsync
     dst: "josh@joshbassett.info:/home/josh/public_html"
 
 # ATOM feed config.
