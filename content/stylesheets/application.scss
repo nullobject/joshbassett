@@ -173,16 +173,14 @@ body#article {
       margin-left: 1.5em;
     }
 
-    // Uppercase the first two words of the first paragraph.
-    .word1, .word2 {
-      text-transform: uppercase;
-    }
+    & > p:first-of-type {
+      strong { text-transform: uppercase; }
 
-    // Double the font size of the first letter of the first word.
-    .word1 .char1 {
-      font-size: 2em;
-      line-height: 0.5em;
-      margin-right: 0.0625em;
+      &:first-letter {
+        font-size: 2em;
+        line-height: 0.5em;
+        margin-right: 0.0625em;
+      }
     }
   }
 }

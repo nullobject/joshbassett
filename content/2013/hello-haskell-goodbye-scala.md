@@ -4,7 +4,7 @@ kind: article
 created_at: 2013-01-22
 ---
 
-I spent a fair chunk of my free time last year teaching myself functional programming in [Scala](http://scala-lang.org/). I read [Scala For The Impatient](http://horstmann.com/scala/) and countless other blog posts. I laughed, cried, and managed to learn a great deal.
+**I spent** a fair chunk of my free time last year teaching myself functional programming in [Scala](http://scala-lang.org/). I read [Scala For The Impatient](http://horstmann.com/scala/) and countless other blog posts. I laughed, cried, and managed to learn a great deal.
 
 Earlier this year I decided to ditch Scala for [Haskell](http://haskell.org/) and get back to some purely functional roots. I thought I'd reflect on my decision a little.
 
@@ -20,11 +20,11 @@ Because you aren't forced to do things the "functional way" it means that if you
 
 I also spent some time learning about the [Scalaz](https://github.com/scalaz/scalaz) library. It expands your functional tool-belt with a bunch of purely functional data structures.
 
-If you're interested in learning about Scalaz there's a great series of [blog posts](http://eed3si9n.com/category/tags/scala/scalaz) by Eugene Yokota. There's also an upcoming book from Paul Chiusano and Rúnar Bjarnason called [Functional Programming In Scala](http://www.manning.com/bjarnason/) which explains some of the theory behind Scalaz.
-
 Scalaz contains a lot of highly academic stuff which I was fairly sure I could live without. There were a few things however, which I was pretty sure I needed to know in order to level-up. For example [Functors](http://en.wikipedia.org/wiki/Functor), [Monads](http://en.wikipedia.org/wiki/Monad_(functional_programming), [Moniods](http://en.wikipedia.org/wiki/Monoid), and [Arrows](http://en.wikipedia.org/wiki/Arrow_(computer_science). But what exactly are these things, why do I need them, and how do I use them? Confusion set in.
 
-Searching for answers always lead me back to an explanation in Haskell. It was around this time that I asked myself: why am I bothering to learn Scala/Scalaz when I should just learn Haskell? It seems like an obvious question, but I had no idea to ask it when I started on the journey.
+If you're interested in learning about Scalaz there's a great series of [blog posts](http://eed3si9n.com/category/tags/scala/scalaz) by Eugene Yokota. There's also an upcoming book from Paul Chiusano and Rúnar Bjarnason called [Functional Programming In Scala](http://www.manning.com/bjarnason/) which explains some of the theory behind Scalaz.
+
+Searching for answers always lead me back to an explanation in Haskell. It was around this time that I asked myself: why am I bothering to learn Scala/Scalaz when I should just learn Haskell?
 
 ## Learn Me A Haskell
 

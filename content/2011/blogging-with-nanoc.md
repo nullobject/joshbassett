@@ -4,7 +4,7 @@ kind: article
 created_at: 2011-01-25
 ---
 
-One of my new year's resolutions was to write a blog. The very page you are reading is a testament to the fact that I was not going to let it slide for another year.
+**One of** my new year's resolutions was to write a blog. The very page you are reading is a testament to the fact that I was not going to let it slide for another year.
 
 As a programmer, I had to strongly resist the urge to write my own blogging engine (a trap which I had fallen into in the past). Instead I decided to use [nanoc](http://nanoc.stoneship.org/) to generate my blog as a static web site. That way there would be no temptation to procrastinate by reinventing a blogging engine, instead of writing actual blog articles. This was the theory anyway...
 
