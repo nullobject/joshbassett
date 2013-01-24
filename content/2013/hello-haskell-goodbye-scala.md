@@ -20,7 +20,7 @@ Because you aren't forced to do things the "functional way" it means that if you
 
 I also spent some time learning about the [Scalaz](https://github.com/scalaz/scalaz) library. It expands your functional tool-belt with a bunch of purely functional data structures.
 
-Scalaz contains a lot of highly academic stuff which I was fairly sure I could live without. There were a few things however, which I was pretty sure I needed to know in order to level-up. For example [Functors](http://en.wikipedia.org/wiki/Functor), [Monads](http://en.wikipedia.org/wiki/Monad_(functional_programming), [Monoids](http://en.wikipedia.org/wiki/Monoid), and [Arrows](http://en.wikipedia.org/wiki/Arrow_(computer_science). But what exactly are these things, why do I need them, and how do I use them? Confusion set in.
+Scalaz contains a lot of highly academic stuff which I was fairly sure I could live without. There were a few things however, which I was pretty sure I needed to know in order to level-up. For example [Functors](http://en.wikipedia.org/wiki/Functor), [Monads](http://en.wikipedia.org/wiki/Monad_\(functional_programming\)), [Monoids](http://en.wikipedia.org/wiki/Monoid), and [Arrows](http://en.wikipedia.org/wiki/Arrow_\(computer_science\)). But what exactly are these things, why do I need them, and how do I use them? Confusion set in.
 
 If you're interested in learning about Scalaz there's a great series of [blog posts](http://eed3si9n.com/category/tags/scala/scalaz) by Eugene Yokota. There's also an upcoming book from Paul Chiusano and Rúnar Bjarnason called [Functional Programming In Scala](http://www.manning.com/bjarnason/) which explains some of the theory behind Scalaz.
 
