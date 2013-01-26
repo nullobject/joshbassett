@@ -48,8 +48,11 @@ data_sources:
 # Deploy config.
 deploy:
   default:
-    kind: rsync
-    dst: "josh@joshbassett.info:/home/josh/public_html"
+    kind:                  fog
+    provider:              aws
+    bucket:                joshbassett.info
+    aws_access_key_id:     AKIAJI634S7N2KDON2MA
+    aws_secret_access_key: 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
 
 # ATOM feed config.
 base_url:    "http://joshbassett.info"
