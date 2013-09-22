@@ -1,5 +1,5 @@
 ---
-title: Running The Papilio Programmer Without Root Privileges
+title: Programming The Papilio Without Root Privileges
 kind: article
 created_at: 2013-09-22
 ---
