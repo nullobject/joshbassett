@@ -1,0 +1,16 @@
+<% wrap_layout :layout do %>
+  <nav>
+    <a href="/"><img src="/images/maquette-small.png" /></a>
+  </nav>
+
+  <article>
+    <header>
+      <section class="meta">
+        <p><time datetime="<%= current_article.date.to_date.to_s(:iso8331) %>"><%= current_article.date.to_date.to_s(:long_ordinal) %></time></p>
+      </section>
+      <h1><%= current_article.title %></h1>
+    </header>
+
+    <%= yield %>
+  </article>
+<% end %>

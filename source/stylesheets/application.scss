@@ -1,5 +1,5 @@
 @import "base";
-@import "coderay";
+@import "syntax";
 
 header, footer, nav, section, article, aside {
   display: block;
@@ -100,31 +100,18 @@ ol {
   @include column(12, true);
 }
 
-p > code, figure {
+pre {
+  border: 1px solid #eee;
+  padding: 0.5em 1em;
+  margin: 0.75em 0;
+  margin-top: 0.25em;
+  overflow: hidden;
   font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
   font-size: 0.7em;
   line-height: 1.5em;
 }
 
-figure {
-  pre.coderay {
-    border: 1px solid #eee;
-    padding: 0.5em 1em;
-    margin: 0.75em 0;
-    margin-top: 0.25em;
-    overflow: hidden;
-  }
-
-  figcaption {
-    background-color: #ccc;
-    color: white;
-    font-size: 0.9em;
-    padding: 0.2em 0.4em;
-    @include border-radius(4px);
-  }
-}
-
-body#home {
+body.home {
   h1 {
     font-size: 64px;
     font-weight: 700;
@@ -148,8 +135,8 @@ body#home {
   }
 }
 
-body#article {
-  & > nav {
+body.article {
+  nav {
     position: absolute;
 
     a {
@@ -164,7 +151,7 @@ body#article {
     header {
       @include clearfix;
 
-      #meta {
+      .meta {
         font-style: italic;
 
         p { margin: 0; }

@@ -1,0 +1,21 @@
+<aside>
+  <img src="/images/maquette.png" />
+</aside>
+
+<header>
+  <h1>Josh Bassett</h1>
+</header>
+
+<section id="bio">
+  <p>Hello. I'm a software developer living in Melbourne, Australia.</p>
+  <p>Please drop me a line on <a href="https://twitter.com/nullobject">Twitter</a>, or check out what I've been hacking on at <a href="https://github.com/nullobject">GitHub</a>.</p>
+</section>
+
+<section id="articles">
+  <h2>Recent Articles</h2>
+  <ul>
+    <% page_articles.each do |article| %>
+      <li><%= link_to(article.title, article) %></li>
+    <% end %>
+  </ul>
+</section>

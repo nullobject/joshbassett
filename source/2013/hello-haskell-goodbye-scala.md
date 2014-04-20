@@ -1,7 +1,6 @@
 ---
 title: Hello Haskell, Goodbye Scala
-kind: article
-created_at: 2013-01-22
+date: 2013-01-22
 ---
 
 **I spent** a fair chunk of my free time last year teaching myself functional programming in [Scala](http://scala-lang.org/). I read [Scala For The Impatient](http://horstmann.com/scala/) and countless other blog posts. I laughed, cried, and managed to learn a great deal.

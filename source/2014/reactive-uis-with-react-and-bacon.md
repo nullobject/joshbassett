@@ -1,7 +1,6 @@
 ---
 title: Reactive UIs with React & Bacon
-kind: article
-created_at: 2014-04-19
+date: 2014-04-19
 ---
 
 **I've** been experimenting with [React.js](http://facebook.github.io/react/)
@@ -30,49 +29,48 @@ interesting the label shows the text in reverse.
 
 Here's the example (also available on [CodePen](http://codepen.io/nullobject/pen/kcjxD?editors=001)):
 
-    [@language="ruby"]
-    [@caption="Listing 1"]
+```coffeescript
+# Reverses a given string.
+reverse = (s) -> s.split('').reverse().join('')
 
-    # Reverses a given string.
-    reverse = (s) -> s.split('').reverse().join('')
+# A text field component.
+TextField = React.createClass
+  propTypes:
+    model: React.PropTypes.instanceOf(Backbone.Model).isRequired
 
-    # A text field component.
-    TextField = React.createClass
-      propTypes:
-        model: React.PropTypes.instanceOf(Backbone.Model).isRequired
+  handleChange: (text) ->
+    @props.model.set('text', text)
+    @forceUpdate()
 
-      handleChange: (text) ->
-        @props.model.set('text', text)
-        @forceUpdate()
+  render: ->
+    valueLink = {value: @props.model.get('text'), requestChange: @handleChange}
+    React.DOM.input(type: 'text', placeholder: 'Enter some text', valueLink: valueLink)
 
-      render: ->
-        valueLink = {value: @props.model.get('text'), requestChange: @handleChange}
-        React.DOM.input(type: 'text', placeholder: 'Enter some text', valueLink: valueLink)
+# A label component.
+Label = React.createClass
+  propTypes:
+    model: React.PropTypes.instanceOf(Backbone.Model).isRequired
 
-    # A label component.
-    Label = React.createClass
-      propTypes:
-        model: React.PropTypes.instanceOf(Backbone.Model).isRequired
+  componentDidMount: ->
+    boundForceUpdate = @forceUpdate.bind(this, null)
+    @props.model?.on('all', boundForceUpdate)
 
-      componentDidMount: ->
-        boundForceUpdate = @forceUpdate.bind(this, null)
-        @props.model?.on('all', boundForceUpdate)
+  render: ->
+    text = @props.model.get('text')
+    React.DOM.p(null, reverse(text))
 
-      render: ->
-        text = @props.model.get('text')
-        React.DOM.p(null, reverse(text))
+# The model represents the state of the text field component.
+model = new Backbone.Model(text: 'hello world')
 
-    # The model represents the state of the text field component.
-    model = new Backbone.Model(text: 'hello world')
-
-    React.renderComponent(
-      React.DOM.div(
-        null,
-        TextField({model}),
-        Label({model})
-      ),
-      document.body
-    )
+React.renderComponent(
+  React.DOM.div(
+    null,
+    TextField({model}),
+    Label({model})
+  ),
+  document.body
+)
+```
 
 In the `componentDidMount` function of the `Label` component we create a
 binding and force an update to the component whenever the model changes. We
@@ -126,54 +124,54 @@ Two popular reactive programming libraries for JavaScript are
 these examples should be much the same if you're using RxJS.
 
 Here's the same example using reactive streams (also available on [CodePen](http://codepen.io/nullobject/pen/uIlAC?editors=001)):
-    [@language="ruby"]
-    [@caption="Listing 2"]
 
-    # Reverses a given string.
-    reverse = (s) -> s.split('').reverse().join('')
+```coffeescript
+# Reverses a given string.
+reverse = (s) -> s.split('').reverse().join('')
 
-    # Reverses the text property of a given object.
-    reverseText = (object) ->
-      object.text = reverse(object.text)
-      object
+# Reverses the text property of a given object.
+reverseText = (object) ->
+  object.text = reverse(object.text)
+  object
 
-    # A text field component binds the text in an <input> element to an output stream.
-    TextField = React.createClass
-      getInitialState: ->
-        text: ''
+# A text field component binds the text in an <input> element to an output stream.
+TextField = React.createClass
+  getInitialState: ->
+    text: ''
 
-      handleChange: (text) ->
-        @setState({text}, -> @props.stream.push(@state))
+  handleChange: (text) ->
+    @setState({text}, -> @props.stream.push(@state))
 
-      render: ->
-        valueLink = {value: @state.text, requestChange: @handleChange}
-        React.DOM.input(type: 'text', placeholder: 'Enter some text', valueLink: valueLink)
+  render: ->
+    valueLink = {value: @state.text, requestChange: @handleChange}
+    React.DOM.input(type: 'text', placeholder: 'Enter some text', valueLink: valueLink)
 
-    # A label component binds an input stream to the text in a <p> element.
-    Label = React.createClass
-      getInitialState: ->
-        text: ''
+# A label component binds an input stream to the text in a <p> element.
+Label = React.createClass
+  getInitialState: ->
+    text: ''
 
-      componentWillMount: ->
-        @props.stream.onValue(@setState.bind(this))
+  componentWillMount: ->
+    @props.stream.onValue(@setState.bind(this))
 
-      render: ->
-        React.DOM.p(null, @state.text)
+  render: ->
+    React.DOM.p(null, @state.text)
 
-    # The text stream object represents the state of the text field component over time.
-    textStream = new Bacon.Bus
+# The text stream object represents the state of the text field component over time.
+textStream = new Bacon.Bus
 
-    # The label stream is the text stream with the reverseText function mapped over it.
-    labelStream = textStream.map(reverseText)
+# The label stream is the text stream with the reverseText function mapped over it.
+labelStream = textStream.map(reverseText)
 
-    React.renderComponent(
-      React.DOM.div(
-        null,
-        TextField(stream: textStream),
-        Label(stream: labelStream)
-      ),
-      document.body
-    )
+React.renderComponent(
+  React.DOM.div(
+    null,
+    TextField(stream: textStream),
+    Label(stream: labelStream)
+  ),
+  document.body
+)
+```
 
 As you can see, data flows from the `TextComponent` through the `reverseText`
 function and into the `Label` component. It's much easier to follow how data is

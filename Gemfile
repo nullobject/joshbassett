@@ -1,17 +1,18 @@
-source "https://rubygems.org"
+source 'http://rubygems.org'
 
-gem 'activesupport',         '~> 4.0.0'
-gem 'bluecloth',             '~> 2.2.0'
-gem 'builder',               '~> 3.2.0'
-gem 'coderay',               '~> 1.1.0'
-gem 'compass',               '~> 0.12.0'
-gem 'fog',                   '~> 1.15.0'
-gem 'guard-nanoc',           '~> 1.0.0'
-gem 'i18n',                  '~> 0.6.0'
-gem 'mime-types',            '~> 1.0'
-gem 'nanoc',                 '~> 3.6.0'
-gem 'nanoc-code-classifier', '~> 0.1.0'
-gem 'rake',                  '~> 10.1.0'
-gem 'rubypants',             '~> 0.2.0'
-gem 'sass',                  '~> 3.2.0'
-gem 'thin',                  '~> 1.5.0'
+# For the blogging.
+gem 'middleman', '~> 3.3.2'
+gem 'middleman-blog', '~> 3.5.2'
+
+# For live reloading pages.
+gem 'middleman-livereload'
+
+# For syntax highlighting.
+gem 'middleman-syntax'
+gem 'redcarpet'
+
+# For deployment to S3.
+gem 'middleman-sync'
+
+# For feed.xml.builder
+gem 'builder', '~> 3.0'
