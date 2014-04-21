@@ -1,17 +1,22 @@
 ---
 title: Lettering.js
 date: 2011-01-31
-published: false
 ---
 
 Have you ever dreamed of having down-to-the-letter control of type in CSS?
 
-[Lettering.js](http://letteringjs.com/) is a sweet [jQuery](http://jquery.com/) plugin which allows you tweak the typography of your site. It allows you to target specific letters, words, or lines within a text element by automatically wrapping them in spans. You can then get creative in CSS and use selectors to drill down to the precise span and tweak to your heart's content. Here's some examples of what you can do with it:
+[Lettering.js](http://letteringjs.com/) is a sweet [jQuery](http://jquery.com/)
+plugin which allows you tweak the typography of your site. It allows you to
+target specific letters, words, or lines within a text element by automatically
+wrapping them in spans. You can then get creative in CSS and use selectors to
+drill down to the precise span and tweak to your heart's content. Here's some
+examples of what you can do with it:
 
 ![Custom kerning](images/cowpoke.png)
 ![Per-letter tweaking](images/trent_walton.png)
 
-I'm going to show you the ropes, we'll be using this HTML snippet throughout the examples:
+I'm going to show you the ropes, we'll be using this HTML snippet throughout
+the examples:
 
 ```html
 <article>
@@ -23,7 +28,8 @@ I'm going to show you the ropes, we'll be using this HTML snippet throughout the
 
 ## Character lettering
 
-Sometimes you need to-the-letter control over a piece of text. Maybe you want to adjust the kerning of a heading, or colour each letter differently.
+Sometimes you need to-the-letter control over a piece of text. Maybe you want
+to adjust the kerning of a heading, or colour each letter differently.
 
 To apply character lettering, you call `lettering()` on a selector.
 
@@ -49,7 +55,8 @@ The contents of the `h1` element will be split into characters:
 
 ## Word lettering
 
-Now let's say you want apply word lettering to every paragraph. This time you specify the `words` parameter.
+Now let's say you want apply word lettering to every paragraph. This time you
+specify the `words` parameter.
 
 ```javascript
 $(document).ready(function() {
@@ -79,7 +86,9 @@ The contents of each `p` element will be split into words:
 
 ## XY crazy shit
 
-You can use jQuery chaining to apply lettering multiple times. For example, let's say we want to apply word lettering to every paragraph and then apply character lettering to the first word in each paragraph:
+You can use jQuery chaining to apply lettering multiple times. For example,
+let's say we want to apply word lettering to every paragraph and then apply
+character lettering to the first word in each paragraph:
 
 ```javascript
 $(document).ready(function() {
