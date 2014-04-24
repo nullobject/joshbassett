@@ -100,15 +100,24 @@ ol {
   @include column(12, true);
 }
 
-pre {
+
+code, pre {
   border: 1px solid #eee;
+  background: #f8f8f8;
+  font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
+  font-size: 0.7em;
+  line-height: 1.5em;
+}
+
+code {
+  padding: 0.25em;
+}
+
+pre {
   padding: 0.5em 1em;
   margin: 0.75em 0;
   margin-top: 0.25em;
   overflow: hidden;
-  font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
-  font-size: 0.7em;
-  line-height: 1.5em;
 }
 
 body.home {
