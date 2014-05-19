@@ -1,3 +1,6 @@
+start:
+	@middleman
+
 all: build sync
 
 build:
