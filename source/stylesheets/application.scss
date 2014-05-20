@@ -13,14 +13,13 @@ body {
   }
 
   color: $font-color;
-  font-family: "adobe-garamond-pro-1", "adobe-garamond-pro-2", serif;
-  font-size: 18px;
+  font-family: 'Mercury SSm A', 'Mercury SSm B', serif;
   font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.6em;
   margin: 2em auto;
   overflow: visible;
-  text-align: justify;
-  text-rendering: optimizeLegibility;
-  //-webkit-font-smoothing: antialiased;
 
   & > footer {
     color: silver;
@@ -35,31 +34,24 @@ a img {
 }
 
 h1, h2, h3 {
-  font-family: "museo-slab-1", "museo-slab-2", serif;
-  font-weight: 300;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', 'san-serif';
+  font-weight: 400;
+  font-style: normal;
+  margin: 1em 0;
 }
 
 h1 {
-  font-size: 1.5em;
-  line-height: 1em;
+  font-size: 2.0em;
+  line-height: 1.6em;
   margin-top: 0;
-  margin-bottom: 1em;
 }
 
 h2 {
-  font-size: 1.1667em;
-  line-height: 1.286em;
-  margin-top: 1.286em;
-  margin-bottom: 1.286em;
-}
-
-h3 {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 1.5em;
+  line-height: 1.6em;
 }
 
 p {
-  line-height: 1.5em;
   margin: 1.5em 0;
 }
 
@@ -104,9 +96,9 @@ ol {
 code, pre {
   border: 1px solid #eee;
   background: #f8f8f8;
-  font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace;
-  font-size: 0.7em;
-  line-height: 1.5em;
+  font-family: 'source-code-pro', monospace;
+  font-size: 14px;
+  line-height: 1.6em;
 }
 
 code {
@@ -125,10 +117,6 @@ body.home {
     font-size: 64px;
     font-weight: 700;
     margin: 0;
-
-    .char2 {
-      margin-left: -3px;
-    }
   }
 
   aside {

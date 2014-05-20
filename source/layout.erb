@@ -10,16 +10,11 @@
     <title><%= current_article.title + ' &mdash; ' unless current_article.nil? %>Josh Bassett</title>
 
     <%= stylesheet_link_tag 'application' %>
+    <link href="//cloud.typography.com/6236092/620864/css/fonts.css" rel="stylesheet" type="text/css" />
+
     <%= feed_tag :atom, '/feed.xml', title: 'Atom Feed' %>
 
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script type="text/javascript" src="/javascripts/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.lettering-0.6.1.min.js"></script>
-    <script type="text/javascript" src="http://use.typekit.com/ggn1xar.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="//use.edgefonts.net/source-code-pro.js"></script>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -41,11 +36,5 @@
     <footer>
       <p>Copyright © <%= Date.today.year %> Josh Bassett.</p>
     </footer>
-
-    <script type="text/javascript">
-      $(function() {
-        $("header > h1").lettering();
-      });
-    </script>
   </body>
 </html>
