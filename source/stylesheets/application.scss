@@ -13,11 +13,7 @@ body {
   }
 
   color: $font-color;
-  font-family: 'Mercury SSm A', 'Mercury SSm B', serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1.6em;
+  font: normal 400 12pt/1.6 'Mercury SSm A', 'Mercury SSm B', serif;
   margin: 2em auto;
   overflow: visible;
 
