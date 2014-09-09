@@ -1,15 +1,16 @@
-start:
-	@middleman
-
-all: build sync
+.PHONY: build clean publish setup watch
 
 build:
-	@middleman build
+	@bundle exec middleman build
 
-sync:
-	@middleman sync
+publish: build
+	@s3cmd sync -H --delete-removed --add-header='Cache-Control:max-age=300' ./build/ s3://joshbassett.info/
 
 clean:
 	@rm -rf build
 
-.PHONY: clean sync
+setup:
+	@bundle install
+
+watch:
+	@bundle exec middleman
