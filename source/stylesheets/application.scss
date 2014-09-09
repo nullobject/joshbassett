@@ -108,6 +108,11 @@ pre {
   overflow: hidden;
 }
 
+pre > code {
+  border: none;
+  padding: 0;
+}
+
 body.home {
   h1 {
     font-size: 64px;
