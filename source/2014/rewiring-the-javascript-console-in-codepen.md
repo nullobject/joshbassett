@@ -34,3 +34,5 @@ If you would like to use console rewiring in your next pen, then simply [fork
 this pen](http://codepen.io/nullobject/pen/rAbio) to get started.
 
 Enjoy!
+
+[Discuss this article on Hacker News.](https://news.ycombinator.com/item?id=8322117)

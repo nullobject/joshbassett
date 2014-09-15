@@ -189,3 +189,5 @@ moment. The [Reactive Streams](http://www.reactive-streams.org) working group
 recently released a draft proposal for a reactive stream specification. I also
 recommend reading the [Reactive Manifesto](http://www.reactivemanifesto.org)
 which was published late last year.
+
+[Discuss this article on Hacker News.](https://news.ycombinator.com/item?id=7612952)

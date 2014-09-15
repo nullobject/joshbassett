@@ -32,3 +32,5 @@ For christmas I bought myself a copy of [Learn You A Haskell For Great Good](htt
 I don't regret taking the time to learn Scala, I guess it lowered the bar to grasp some of the functional programming constructs in Haskell. But if could do things differently I would *start* with Haskell, and then move on to other functional languages.
 
 Bring on the next six months!
+
+[Discuss this article on Hacker News.](https://news.ycombinator.com/item?id=5096523)
