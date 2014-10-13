@@ -104,7 +104,7 @@ elegantly solve problems. Let's take a look at a few examples using FKit.
 Here we multiply each number in a list by two:
 
 ``` js
-[1, 2, 3].map(F.mul(2)); // [2, 4, 5]
+[1, 2, 3].map(F.mul(2)); // [2, 4, 6]
 ```
 
 By using the `reduce` function with `F.add` (a binary function), we can sum all
