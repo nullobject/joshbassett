@@ -26,10 +26,10 @@ background to many of the functional programming concepts it uses.
 
 ## Curried Functions
 
+<img src="images/curry.png" align="left" />
+
 Most functions in FKit are already *curried by default*, so it's worth spending
 some time explaining curried functions.
-
-<img src="images/curry.png" align="right" />
 
 A *curried function* is a function that instead of taking multiple arguments
 takes exactly one argument. It returns another function that takes exactly one
@@ -60,7 +60,7 @@ add3(1)(2)(3); // 6
 
 ## Partially Applied Functions
 
-<img src="images/fx.png" align="left" />
+<img src="images/fx.png" align="right" />
 
 What happens when we don't specify all the arguments to a curried function?
 Let's find out.
@@ -123,7 +123,7 @@ the `F.gt` predicate:
 
 ## Function Composition
 
-<img src="images/notes.png" align="right" />
+<img src="images/notes.png" align="left" />
 
 Function composition is a powerful way to specify a series of functions, where
 each function takes the result of another function as an argument. In other
@@ -229,7 +229,7 @@ F.replicate('a', 3); // 'aaa'
 
 ## Combinators
 
-<img src="images/map.png" align="left" />
+<img src="images/map.png" align="right" />
 
 JavaScript provides several *combinators* for working with arrays, for example
 `map`, `filter` and `reduce`. Combinators are higher-order functions (functions
