@@ -1,14 +1,16 @@
 source 'http://rubygems.org'
 
-# For the blogging.
-gem 'middleman', '~> 3.3.2'
-gem 'middleman-blog', '~> 3.5.2'
+# For blogging.
+gem 'middleman', '~> 4.2'
+gem 'middleman-blog', '~> 4.0'
 
 # For grid layout.
-gem 'compass-blueprint'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
 
 # For live reloading pages.
-gem 'middleman-livereload'
+gem 'middleman-livereload', '~> 3.4'
 
 # For syntax highlighting.
 gem 'middleman-syntax'
