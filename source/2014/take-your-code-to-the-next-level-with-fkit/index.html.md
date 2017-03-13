@@ -3,7 +3,7 @@ title: "Take Your Code to the Next Level with FKit"
 date: 2014-10-13
 ---
 
-<img src="images/fkit.png" align="right" width="128px" />
+<img src="images/fkit.png" align="right" width="128px">
 
 Recently I've been busy working on [FKit](https://github.com/nullobject/fkit):
 a functional programming toolkit for JavaScript. It provides many functions for
@@ -26,7 +26,7 @@ background to many of the functional programming concepts it uses.
 
 ## Curried Functions
 
-<img src="images/curry.png" align="left" />
+<img src="images/curry.png" align="left">
 
 Most functions in FKit are already *curried by default*, so it's worth spending
 some time explaining curried functions.
@@ -60,7 +60,7 @@ add3(1)(2)(3); // 6
 
 ## Partially Applied Functions
 
-<img src="images/fx.png" align="right" />
+<img src="images/fx.png" align="right">
 
 What happens when we don't specify all the arguments to a curried function?
 Let's find out.
@@ -123,7 +123,7 @@ the `F.gt` predicate:
 
 ## Function Composition
 
-<img src="images/notes.png" align="left" />
+<img src="images/notes.png" align="left">
 
 Function composition is a powerful way to specify a series of functions, where
 each function takes the result of another function as an argument. In other
@@ -174,7 +174,7 @@ really just a *list of characters*. Imagine how useful it would be to use the
 same functions on different kinds of lists, whether it be an array of numbers
 or a string?
 
-<p align="center"><img src="images/listmonster.png" /></p>
+<p align="center"><img src="images/listmonster.png"></p>
 
 FKit provides many list functions and they all work in exactly the same way for
 arrays as they do for strings. This seemingly simple abstraction is very
@@ -229,7 +229,7 @@ F.replicate('a', 3); // 'aaa'
 
 ## Combinators
 
-<img src="images/map.png" align="right" />
+<img src="images/map.png" align="right">
 
 JavaScript provides several *combinators* for working with arrays, for example
 `map`, `filter` and `reduce`. Combinators are higher-order functions (functions
