@@ -1,19 +1,19 @@
-@import "base";
-@import "syntax";
+@charset "utf-8";
+
+@import "normalize.css";
+@import "syntax.css";
+@import "bourbon";
+@import "base/base";
+@import "neat";
 
 header, footer, nav, section, article, aside {
   display: block;
 }
 
 body {
-  @include container;
+  @include grid-container;
 
-  @if $debug {
-    @include showgrid;
-  }
-
-  color: $font-color;
-  font: normal 400 12pt/1.6 'Mercury SSm A', 'Mercury SSm B', serif;
+  width: 763px;
   margin: 2em auto;
   overflow: visible;
 
@@ -21,18 +21,12 @@ body {
     color: silver;
     font-size: 0.75em;
     text-align: center;
-    @include column(24);
+    @include grid-column(12);
   }
 }
 
-a img {
-  border: none;
-}
-
 h1, h2, h3 {
-  font-family: 'Gotham SSm A', 'Gotham SSm B', 'san-serif';
   font-weight: 400;
-  font-style: normal;
   margin: 1em 0;
 }
 
@@ -51,41 +45,12 @@ p {
   margin: 1.5em 0;
 }
 
-em {
-  font-style: italic;
-}
-
-ul, ol {
-  list-style-position: inside;
-  margin: 1.5em;
-
-  li {
-    line-height: 1.5em;
-    margin: 0;
-  }
-}
-
-a {
-  color: $link-color;
-  border-bottom: 2px solid transparent;
-  text-decoration: none;
-  @include transition(border 0.25s ease-in);
-
-  &:hover {
-    border-bottom: 2px solid $link-color;
-  }
-}
-
-ol {
-  list-style-type: decimal;
-}
-
 #left {
-  @include column(12);
+  @include grid-column(6);
 }
 
 #right {
-  @include column(12, true);
+  @include grid-column(6);
 }
 
 
