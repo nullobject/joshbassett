@@ -7,6 +7,9 @@ gem 'middleman-blog', '~> 4.0'
 # For CSS prefixing.
 gem 'middleman-autoprefixer'
 
+# For Google Analytics.
+gem 'middleman-google-analytics', '~> 3.0'
+
 # For grid layout.
 gem 'bourbon'
 gem 'neat'

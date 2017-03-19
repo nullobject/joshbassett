@@ -19,6 +19,11 @@ activate :blog do |blog|
   blog.layout    = 'article'
 end
 
+# Configure Google Analytics.
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-20723605-1'
+end
+
 # Output files as index files in a directory.
 activate :directory_indexes
 
