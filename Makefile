@@ -13,4 +13,4 @@ setup:
 	@bundle install
 
 watch:
-	@bundle exec middleman
+	@./bin/middleman
