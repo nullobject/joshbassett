@@ -4,6 +4,9 @@ source 'http://rubygems.org'
 gem 'middleman', '~> 4.2'
 gem 'middleman-blog', '~> 4.0'
 
+# For CSS prefixing.
+gem 'middleman-autoprefixer'
+
 # For grid layout.
 gem 'bourbon'
 gem 'neat'

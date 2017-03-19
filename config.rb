@@ -8,6 +8,11 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+# Add vendor prefixes to CSS.
+activate :autoprefixer do |config|
+  config.ignore = ['/fonts/*']
+end
+
 activate :blog do |blog|
   blog.permalink = '{year}/{title}.html'
   blog.sources   = "{year}/{title}.html"
