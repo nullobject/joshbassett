@@ -85,7 +85,7 @@ add_numericality_constraint :books, :published_month,
   less_than_or_equal_to: 12
 ```
 
-## Check It Out
+## Check It Out!
 
 If you're interested in this kind of thing then take a look at the [Rein
 project on GitHub](https://github.com/nullobject/rein).

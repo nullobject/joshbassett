@@ -11,7 +11,7 @@ potentially break the tests that depend on them.
 that helps you to write cleaner and more expressive acceptance tests for your
 Ruby web applications using page objects.
 
-## What is a page object?
+## What is a Page Object?
 
 A [page object](https://martinfowler.com/bliki/PageObject.html) is a data
 structure that provides an interface to your web application for the purposes
@@ -144,7 +144,7 @@ Querying a component of our page object is much the same as for an element:
 page.header.title.text # "Welcome"
 ```
 
-## Writing acceptance tests with page objects
+## Writing Acceptance Tests with Page Objects
 
 Let's look at a more complete example for our `WelcomePage`. Note that the
 `Header`, `NavItem`, and `Nav` components can be reused in any other page
