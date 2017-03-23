@@ -89,6 +89,8 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
+    middleman-disqus (1.2.0)
+      middleman-core (~> 4.0)
     middleman-google-analytics (3.0.0)
       activesupport (>= 4.1, < 5.1)
       erubis
@@ -141,6 +143,7 @@ DEPENDENCIES
   middleman (~> 4.2)
   middleman-autoprefixer
   middleman-blog (~> 4.0)
+  middleman-disqus
   middleman-google-analytics (~> 3.0)
   middleman-livereload (~> 3.4)
   middleman-syntax

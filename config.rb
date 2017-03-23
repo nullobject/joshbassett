@@ -41,13 +41,19 @@ set :images_dir, 'images'
 
 configure :development do
   activate :livereload
+  activate :disqus do |d|
+    d.shortname = "joshbassett-development"
+  end
 end
 
-# Build-specific configuration
 configure :build do
   # Minify CSS on build
   # activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
+
+  activate :disqus do |d|
+    d.shortname = "joshbassett"
+  end
 end
