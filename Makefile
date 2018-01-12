@@ -4,7 +4,7 @@ build:
 	@bundle exec middleman build
 
 publish: build
-	@s3cmd sync -H -P --delete-removed --add-header='Cache-Control:max-age=300' ./build/ s3://joshbassett.info/
+	@aws --profile personal s3 sync ./build/ s3://joshbassett.info/ --acl public-read --delete --cache-control 'max-age=300'
 
 clean:
 	@rm -rf build
