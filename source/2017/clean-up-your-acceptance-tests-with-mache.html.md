@@ -28,13 +28,13 @@ From Martin Fowler:
 there. It allows us to work with an API rather than manipulating the HTML
 directly, but what it provides isn't an *application specific* API. It gives us
 low-level API methods like `find`, `fill_in`, and `click_button`, but it
-doesn't provide us with high-level methods to do things like "sign in to the
-app" or "click the Dashboard item in the navigation bar".
+doesn't provide us with high-level methods to do things like 'sign in to the
+app' or 'click the Dashboard item in the navigation bar'.
 
 This is where page objects come in. Using Mâché we can for instance define a
 page object class called `SignInPage` and use it any time we want to automate
 authenticating with our app. It could handle visiting the sign in page,
-entering the user's credentials, and clicking the "Sign in" button.
+entering the user's credentials, and clicking the 'Sign in' button.
 
 ## Mâché
 

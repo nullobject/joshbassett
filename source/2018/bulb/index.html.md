@@ -11,7 +11,7 @@ JavaScript, called [Bulb](https://github.com/nullobject/bulb).
 The growing popularity of reactive programming in recent years has seen the
 introduction of a number of reactive programming libraries for JavaScript (e.g.
 RxJS, Bacon.js, Most.js, etc.). Most of these libraries go down the route of
-providing the "kitchen sink" — and are subsequently quite large — with complex
+providing the 'kitchen sink' — and are subsequently quite large — with complex
 APIs.
 
 Bulb focuses on delivering a very simple API (around 4 KB) that provides only
@@ -30,7 +30,7 @@ as a sequence of simple operations on streams (e.g. `map`, `fold`, `zip`,
 etc.), instead of writing a bunch of event-handling spaghetti code.
 
 Bulb introduces an abstraction called a *signal* to represent a stream of data.
-The term "signal" is borrowed from the [hardware description
+The term 'signal' is borrowed from the [hardware description
 languages](https://en.wikipedia.org/wiki/Hardware_description_language), which
 allow changes to be modelled as they travel through circuits.
 
@@ -38,7 +38,7 @@ allow changes to be modelled as they travel through circuits.
 
 Much like in electrical circuits, signals are an ordered time-varying source of
 values. There are three different kinds of values that can be emitted by a
-signal: data (of any type), an error, or a "complete" event. Signals can be
+signal: data (of any type), an error, or a 'complete' event. Signals can be
 created, merged, and changed using *combinator* functions.
 
 When you want to observe a signal for changes, you must *subscribe* to it. Once

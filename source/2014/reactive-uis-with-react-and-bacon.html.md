@@ -84,7 +84,7 @@ had a one-way data binding to their state object. This means that the component
 is automatically updated whenever the state changes via a call to its
 `setState` function.  Circumventing this default behaviour with another state
 object (i.e.  a Backbone model) and custom data bindings seemed to be at odds
-with this simplicity.  Perhaps this wasn't the "React way"?
+with this simplicity.  Perhaps this wasn't the 'React way'?
 
 I started thinking: do I even need a model? What if there was a way I could
 represent the state of a component over time, transform it in some way, and

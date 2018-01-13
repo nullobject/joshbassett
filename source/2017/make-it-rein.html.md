@@ -24,7 +24,7 @@ Constraining the values allowed by your application at the database-level,
 rather than at the application-level, is a more robust way of ensuring your
 data stays sane.
 
-If you consider your database to be the "single source of truth", then you
+If you consider your database to be the 'single source of truth', then you
 can't rely on your application to enforce the validity of your data. There are
 myriad possibilities for your application can drop the ball on your data
 integrity: bugs in your application code, bugs in third-party libraries,

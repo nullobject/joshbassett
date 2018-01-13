@@ -13,7 +13,7 @@ Scala is a hybrid language which supports both [functional programming](http://e
 
 For one Scala is not a [purely functional](http://en.wikipedia.org/wiki/Purely_functional) language, which in my view makes it a poor choice for learning functional programming. I'm not saying that it's a bad language to learn, in fact I think there's quite a lot to like about it. What I'm saying is that because functional programming in Scala is only a convention (i.e. it's not enforced by the language) you don't learn functional programming as quickly as you would with a purely functional language.
 
-Because you aren't forced to do things the "functional way" it means that if you get stuck solving a problem then you're likely to fall back on old habits to get the job done. Scala's flexibility allows you to come at a problem from multiple angles (i.e. imperative and functional), this seems like a good thing™. The problem is that you cheated and didn't learn anything.
+Because you aren't forced to do things the 'functional way' it means that if you get stuck solving a problem then you're likely to fall back on old habits to get the job done. Scala's flexibility allows you to come at a problem from multiple angles (i.e. imperative and functional), this seems like a good thing™. The problem is that you cheated and didn't learn anything.
 
 ## Scalaz
 

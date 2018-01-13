@@ -17,7 +17,7 @@ bother solving these common problems over and over again?
 
 Other libraries have attempted to address this issue (Underscore, Lo-dash,
 etc), but in my opinion they're rudimentary. The implication is that you often
-have to "reinvent the wheel" while writing JavaScript day-to-day.
+have to 'reinvent the wheel' while writing JavaScript day-to-day.
 
 FKit is my attempt at a *standard library* for JavaScript. It aims to provide
 reusable building blocks while maintaining a laser focus on everyday utility.
