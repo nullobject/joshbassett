@@ -1,5 +1,8 @@
 require 'active_support/core_ext/date'
-Date::DATE_FORMATS[:long_ordinal] = lambda { |date| date.strftime("#{date.day.ordinalize} %B %Y") }
+
+Date::DATE_FORMATS[:long_ordinal] = lambda do |date|
+  date.strftime("#{date.day.ordinalize} %B %Y")
+end
 
 Time.zone = 'Melbourne'
 
@@ -15,8 +18,8 @@ end
 
 activate :blog do |blog|
   blog.permalink = '{year}/{title}.html'
-  blog.sources   = "{year}/{title}.html"
-  blog.layout    = 'article'
+  blog.sources = '{year}/{title}.html'
+  blog.layout = 'article'
 end
 
 # Configure Google Analytics.
@@ -32,28 +35,28 @@ activate :syntax
 
 # Set the markdown engine.
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 # Set asset directories.
-set :css_dir,    'stylesheets'
-set :js_dir,     'javascripts'
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 configure :development do
   activate :livereload
   activate :disqus do |d|
-    d.shortname = "joshbassett-development"
+    d.shortname = 'joshbassett-development'
   end
 end
 
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   activate :disqus do |d|
-    d.shortname = "joshbassett"
+    d.shortname = 'joshbassett'
   end
 end
