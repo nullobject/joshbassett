@@ -23,12 +23,11 @@ language.
 Before I get carried away talking about Bulb, it's probably worth pausing to
 explain reactive programming.
 
-Reactive programming is paradigm for writing event-based (asynchronous)
-programs. The program logic is expressed with *streams*, rather than by
-defining event handlers which alter the program's state. This allows any
-asynchronous program to be expressed as a sequence of simple operations on
-streams (e.g.  map, fold, zip, etc.), instead of writing a bunch of
-event-handling spaghetti code.
+Reactive programming is paradigm for writing event-based programs. The program
+logic is expressed with *streams*, rather than by defining event handlers which
+alter the program's state. This allows any asynchronous program to be expressed
+as a sequence of simple operations on streams (e.g. `map`, `fold`, `zip`,
+etc.), instead of writing a bunch of event-handling spaghetti code.
 
 Bulb introduces an abstraction called a *signal* to represent a stream of data.
 The term "signal" is borrowed from the [hardware description
@@ -46,12 +45,12 @@ When you want to observe a signal for changes, you must *subscribe* to it. Once
 you have subscribed to a signal then it will start emitting values. Finally
 when you are done observing a signal, then you can *unsubscribe* from a it.
 
-Signals also keep track of their subscribers — when the last observer
-unsubscribes from a signal, then it will be automatically unmounted. The
-mounting and unmounting of a signal starts and stops the flow of changes
-respectively. For example, mounting a timer signal starts an internal timer
-with a `setInterval` function call. When the signal is unmounted, then the
-`clearInterval` function is called to stop the timer.
+Signals keep track of their subscribers — when the last observer unsubscribes
+from a signal, then it will be automatically unmounted. The mounting and
+unmounting of a signal starts and stops the flow of changes respectively. For
+example, mounting a timer signal starts an internal timer with a `setInterval`
+function call. When the signal is unmounted, then the `clearInterval` function
+is called to stop the timer.
 
 ### A Timer
 

@@ -44,7 +44,12 @@ body.article {
     }
 
     img {
-      margin: 1.5rem;
+      margin: 1rem;
+      max-width: 100%;
+    }
+
+    .text-center > img {
+      margin: 1rem 0;
     }
 
     pre {
