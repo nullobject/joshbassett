@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-au">
   <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Josh Bassett">
     <meta name="description" content="The life and times of Josh Bassett.">
     <meta name="keywords" content="josh, bassett, blog, ruby, javascript, haskell, scala, purescript">
+
     <title><%= current_article.title + ' &mdash; ' unless current_article.nil? %>Josh Bassett</title>
+
     <%= stylesheet_link_tag "application" %>
     <%= feed_tag :atom, "/feed.xml", title: "Atom Feed" %>
-    <script src="//use.edgefonts.net/source-code-pro.js"></script>
     <%= google_analytics_tag %>
   </head>
   <body class="<%= current_page.request_path == "index.html" ? "home" : "article" %>">
-    <div role="main">
-      <%= yield %>
-    </div>
+    <%= yield %>
 
     <footer>
       <p>Copyright © <%= Date.today.year %> Josh Bassett.</p>

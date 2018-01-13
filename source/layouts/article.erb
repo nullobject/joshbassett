@@ -1,18 +1,25 @@
 <% wrap_layout :layout do %>
-  <nav>
-    <a href="/"><img src="/images/maquette-small.png"></a>
+  <nav class="navbar navbar-light bg-light mb-3">
+    <a class="navbar-brand" href="/">
+      <img src="/images/profile.jpg" alt="" class="border border-light rounded-circle">
+    </a>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/">Home</a>
+    </div>
   </nav>
 
-  <article>
-    <header>
-      <section class="meta">
-        <p><time datetime="<%= current_article.date.to_date.to_s(:iso8331) %>"><%= current_article.date.to_date.to_s(:long_ordinal) %></time></p>
-      </section>
-      <h1><%= current_article.title %></h1>
-    </header>
+  <div class="container">
+    <article class="mb-5">
+      <header>
+        <h1><%= current_article.title %></h1>
+        <p class="text-muted"><time datetime="<%= current_article.date.to_date.to_s(:iso8331) %>"><%= current_article.date.to_date.to_s(:long_ordinal) %></time></p>
+      </header>
 
-    <%= yield %>
-  </article>
+      <%= yield %>
+    </article>
 
-  <%= disqus %>
+    <div class="mb-3">
+      <%= disqus %>
+    </div>
+  </div>
 <% end %>

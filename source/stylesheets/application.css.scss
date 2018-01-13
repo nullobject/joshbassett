@@ -1,146 +1,50 @@
-@charset "utf-8";
-
-@import "normalize.css";
+@import "bootstrap";
 @import "syntax.css";
-@import "bourbon";
-@import "base/base";
-@import "neat";
-
-header, footer, nav, section, article, aside {
-  display: block;
-}
 
 body {
-  @include grid-container;
-
-  width: 763px;
-  margin: 2em auto;
-  overflow: visible;
-
   & > footer {
     color: silver;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     text-align: center;
-    @include grid-column(12);
   }
 }
 
-h1, h2, h3 {
-  font-weight: 400;
-  margin: 1em 0;
-}
-
-h1 {
-  font-size: 2.0em;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-top: 2em;
-}
-
-h3 {
-  font-size: 1.2em;
-  margin-top: 2em;
-}
-
-p {
-  margin: 1.5em 0;
-}
-
-#left {
-  @include grid-column(6);
-}
-
-#right {
-  @include grid-column(6);
-}
-
-
 code, pre {
-  border: 1px solid #eee;
   background: #f8f8f8;
-  font-family: 'source-code-pro', monospace;
-  font-size: 14px;
-  line-height: 1.6em;
+  border: 1px solid #eee;
 }
 
 code {
-  padding: 0.25em;
+  padding: 0.25rem;
 }
 
 pre {
-  padding: 0.5em 1em;
-  margin: 0.75em 0;
-  margin-top: 0.25em;
   overflow: hidden;
-}
+  padding: 0.5rem 1rem;
 
-pre > code {
-  border: none;
-  padding: 0;
-}
-
-body.home {
-  h1 {
-    font-size: 64px;
-    margin: 0;
-  }
-
-  aside {
-    float: right;
-  }
-
-  #bio {
-    font-style: italic;
-  }
-
-  #articles ul {
-    margin: 0 0 1.5em 0;
+  & > code {
+    border: none;
+    padding: 0;
   }
 }
 
 body.article {
-  nav {
-    position: absolute;
-
-    a {
-      font-size: smaller;
-      position: relative;
-      left: -70px;
-      top: -20px;
-    }
+  nav img {
+    width: 48px;
+    height: 48px;
   }
 
   article {
-    header {
-      @include clearfix;
-
-      .meta {
-        font-style: italic;
-
-        p { margin: 0; }
-      }
-    }
-
-    aside {
-      float: right;
-      margin-left: 1.5em;
-    }
-
     & > p:first-of-type {
       strong { text-transform: uppercase; }
 
       &:first-letter {
-        font-size: 2em;
-        line-height: 0.5em;
-        margin-right: 0.0625em;
+        font-size: 1.5rem;
       }
     }
 
     img {
-      margin: 1.5em;
+      margin: 1.5rem;
     }
 
     pre {
