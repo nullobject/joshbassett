@@ -32,14 +32,17 @@ etc.), instead of writing a bunch of event-handling spaghetti code.
 Bulb introduces an abstraction called a *signal* to represent a stream of data.
 The term 'signal' is borrowed from the [hardware description
 languages](https://en.wikipedia.org/wiki/Hardware_description_language), which
-allow changes to be modelled as they travel through circuits.
+allow changes to be modelled as they travel through circuits. Much like in
+electrical circuits, signals are an ordered time-varying source of values.
+Signals can be created, merged, and changed using *combinator* functions.
 
 <p class="text-center"><img src="images/signal.png"></p>
 
-Much like in electrical circuits, signals are an ordered time-varying source of
-values. There are three different kinds of values that can be emitted by a
-signal: data (of any type), an error, or a 'complete' event. Signals can be
-created, merged, and changed using *combinator* functions.
+There are three different kinds of values that can be emitted by a signal: data
+(of any type), an error, or a 'complete' event. The diagram above shows the
+timeline for a signal that emits mouse 'click' events. The signal can emit
+multiple 'click' events or errors, but once the 'complete' event is triggered
+the signal emits no more events.
 
 When you want to observe a signal for changes, you must *subscribe* to it. Once
 you have subscribed to a signal then it will start emitting values. Finally
