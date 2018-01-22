@@ -8,10 +8,23 @@
 </div>
 
 <div class="container">
-  <h5>Recent Articles</h5>
-  <ul>
-    <% page_articles.each do |article| %>
-      <li><%= link_to(article.title, article) %></li>
-    <% end %>
-  </ul>
+  <div class="row">
+    <div class="col-md-8">
+      <h5>Recent Articles</h5>
+      <ul>
+        <% page_articles.each do |article| %>
+          <li><%= link_to(article.title, article) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h5>Projects</h5>
+      <ul>
+        <li><a href="https://github.com/nullobject/bulb">Bulb</a></li>
+        <li><a href="https://github.com/nullobject/fkit">FKit</a></li>
+        <li><a href="https://github.com/nullobject/mache">Mâché</a></li>
+        <li><a href="https://github.com/nullobject/rein">Rein</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
