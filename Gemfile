@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 gem 'builder', '~> 3.0'
 
 # For styles.
-gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'bootstrap', '~> 4.0.0'
 
 # For blogging.
 gem 'middleman', git: 'https://github.com/middleman/middleman.git', ref: '8e6aba9'
