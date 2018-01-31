@@ -1,5 +1,10 @@
-@import "bootstrap";
-@import "syntax.css";
+$font-family-base: 'Libre Baskerville', serif !default;
+$headings-font-family: 'Roboto Condensed', sans-serif !default;
+
+@import 'bootstrap';
+@import 'syntax.css';
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 body {
   & > footer {
