@@ -1,4 +1,4 @@
-.PHONY: build clean publish setup watch
+.PHONY: build clean publish setup start
 
 build:
 	@bundle exec middleman build
@@ -12,5 +12,5 @@ clean:
 setup:
 	@bundle install
 
-watch:
+start:
 	@./bin/middleman
