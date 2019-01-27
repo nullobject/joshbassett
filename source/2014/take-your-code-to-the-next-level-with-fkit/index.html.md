@@ -42,8 +42,8 @@ that takes a value `b`. When `add` is applied to the values `a` and `b` then
 the result `a + b` is returned:
 
 ``` js
-function add(a) {
-  return function(b) {
+function add (a) {
+  return function (b) {
     return a + b
   }
 }
@@ -51,10 +51,11 @@ add(1)(2) // 3
 ```
 
 With FKit you can easily curry a function of any
-[arity](http://en.wikipedia.org/wiki/Arity) using the `F.curry` function:
+[arity](http://en.wikipedia.org/wiki/Arity) using the `curry` function:
 
 ``` js
-var add3 = F.curry(function(a, b, c) { return a + b + c })
+import { curry } from 'fkit'
+const add3 = curry((a, b, c) => a + b + c)
 add3(1)(2)(3) // 6
 ```
 
@@ -69,8 +70,8 @@ First, let's define a curried function `mul` that multiplies two numbers
 together:
 
 ``` js
-function mul(a) {
-  return function(b) {
+function mul (a) {
+  return function (b) {
     return a * b
   }
 }
@@ -92,7 +93,7 @@ This is actually quite useful. For example, we can assign the partially applied
 `mul` function to the variable `double` and apply it to some other values:
 
 ``` js
-var double = mul(2)
+const double = mul(2)
 double(1) // 2
 double(2) // 4
 double(3) // 6
@@ -104,21 +105,24 @@ elegantly solve problems. Let's take a look at a few examples using FKit.
 Here we multiply each number in a list by two:
 
 ``` js
-[1, 2, 3].map(F.mul(2)) // [2, 4, 6]
+import { mul } from 'fkit'
+[1, 2, 3].map(mul(2)) // [2, 4, 6]
 ```
 
-By using the `reduce` function with `F.add` (a binary function), we can sum all
+By using the `reduce` function with `add` (a binary function), we can sum all
 the numbers in a list:
 
 ``` js
-[1, 2, 3].reduce(F.add) // 6
+import { add } from 'fkit'
+[1, 2, 3].reduce(add) // 6
 ```
 
 To filter the all the numbers in a list which are greater than one, we can use
-the `F.gt` predicate:
+the `gt` predicate:
 
 ``` js
-[1, 2, 3].filter(F.gt(1)) // [2, 3]
+import { gt } from 'fkit'
+[1, 2, 3].filter(gt(1)) // [2, 3]
 ```
 
 ## Function Composition
@@ -132,8 +136,8 @@ words, `compose(f, g)` is equivalent to saying `f(g(a))`.
 Now let's define a function `compose` that composes two functions together:
 
 ``` js
-function compose(f, g) {
-  return function(a) {
+function compose (f, g) {
+  return function (a) {
     return f(g(a))
   }
 }
@@ -143,17 +147,18 @@ Using our `add` and `mul` functions from earlier, we can compose a function
 `doubleAndAddOne` that doubles and adds one to a given number:
 
 ``` js
-var doubleAndAddOne = compose(add(1), mul(2))
+const doubleAndAddOne = compose(add(1), mul(2))
 doubleAndAddOne(1) // 3
 doubleAndAddOne(2) // 5
 doubleAndAddOne(3) // 7
 ```
 
 FKit allows you to easily compose any number of functions together using the
-`F.compose` function:
+`compose` function:
 
 ``` js
-var myFunction = F.compose(f, g, h)
+import { compose } from 'fkit'
+const myFunction = compose(f, g, h)
 ```
 
 ## Lists
@@ -163,9 +168,7 @@ string?
 
 ``` js
 [1, 2, 3].reverse() // [3, 2, 1]
-
-'foo'.reverse()
-TypeError: Object foo has no method 'reverse'.
+'foo'.reverse() // TypeError: Object foo has no method 'reverse'.
 ```
 
 This is because arrays and strings are fundamentally different data types in
@@ -184,47 +187,53 @@ To highlight this point, let's look at some basic list functions on both arrays
 and strings:
 
 ``` js
-F.head([1, 2, 3]) // 1
-F.head('foo') // 'f'
+import { head, init, last, tail } from 'fkit'
 
-F.tail([1, 2, 3]) // [2, 3]
-F.tail('foo') // 'oo'
+head([1, 2, 3]) // 1
+head('foo') // 'f'
 
-F.last([1, 2, 3]) // 3
-F.last('foo') // 'o'
+tail([1, 2, 3]) // [2, 3]
+tail('foo') // 'oo'
 
-F.init([1, 2, 3]) // [1, 2]
-F.init('foo') // 'fo'
+last([1, 2, 3]) // 3
+last('foo') // 'o'
+
+init([1, 2, 3]) // [1, 2]
+init('foo') // 'fo'
 ```
 
 We can also create new lists by adding elements to lists:
 
 ``` js
-F.append(3, [1, 2]) // [1, 2, 3]
-F.append('o', 'fo') // 'foo'
+import { append, intersperse, prepend, surround } from 'fkit'
 
-F.prepend(1, [2, 3]) // [1, 2, 3]
-F.prepend('f', 'oo') // 'foo'
+append(3, [1, 2]) // [1, 2, 3]
+append('o', 'fo') // 'foo'
 
-F.surround(0, 4, [1, 2, 3]) // [0, 1, 2, 3, 4]
-F.surround('¡', '!', 'hola') // '¡hola!'
+prepend(1, [2, 3]) // [1, 2, 3]
+prepend('f', 'oo') // 'foo'
 
-F.intersperse(4, [1, 2, 3]) // [1, 4, 2, 4, 3]
-F.intersperse('-', 'foo') // 'f-o-o'
+surround(0, 4, [1, 2, 3]) // [0, 1, 2, 3, 4]
+surround('¡', '!', 'hola') // '¡hola!'
+
+intersperse(4, [1, 2, 3]) // [1, 4, 2, 4, 3]
+intersperse('-', 'foo') // 'f-o-o'
 ```
 
 Joining lists together? No problemmo:
 
 ``` js
-F.concat([1], [2, 3], [4, 5, 6]) // [1, 2, 3, 4, 5, 6]
-F.concat('f', 'oo', 'bar') // 'foobar'
+import { concat } from 'fkit'
+concat([1], [2, 3], [4, 5, 6]) // [1, 2, 3, 4, 5, 6]
+concat('f', 'oo', 'bar') // 'foobar'
 ```
 
 Building new lists? It's a snack:
 
 ``` js
-F.replicate(1, 3) // [1, 1, 1]
-F.replicate('a', 3) // 'aaa'
+import { replicate } from 'fkit'
+replicate(1, 3) // [1, 1, 1]
+replicate('a', 3) // 'aaa'
 ```
 
 ## Combinators
@@ -239,45 +248,51 @@ generally, *any* data structure – in some way.
 FKit also provides all of your favourite combinators, plus a few more you may
 not have encountered before. They also all work on both strings and arrays!
 
-`F.map` takes a function and applies it to every element in a list, returning a
+`map` takes a function and applies it to every element in a list, returning a
 new list:
 
 ``` js
-F.map(F.inc, [1, 2, 3]) // [2, 3, 4]
-F.map(F.toUpper, 'foo') // ['F', 'O', 'O']
+import { inc, map, toUpper } from 'fkit'
+map(inc, [1, 2, 3]) // [2, 3, 4]
+map(toUpper, 'foo') // ['F', 'O', 'O']
 ```
 
-`F.filter` filters the elements in a list using a predicate function:
+`filter` filters the elements in a list using a predicate function:
 
 ``` js
-F.filter(F.gt(1), [1, 2, 3]) // [2, 3]
-F.filter(F.eq('o'), 'foo') // 'oo'
+import { eq, filter, gt } from 'fkit'
+filter(gt(1), [1, 2, 3]) // [2, 3]
+filter(eq('o'), 'foo') // 'oo'
 ```
 
-`F.fold` folds a list into a single value using a binary function and a
+`fold` folds a list into a single value using a binary function and a
 starting value:
 
 ``` js
-F.fold(F.add, 0, [1, 2, 3]) // 6
-F.fold(F.flip(F.prepend), '', 'foo') // 'oof'
+import { add, flip, fold, prepend } from 'fkit'
+fold(add, 0, [1, 2, 3]) // 6
+fold(flip(prepend), '', 'foo') // 'oof'
 ```
 
-`F.zip` zips the corresponding elements from two lists into a list of pairs:
+`zip` zips the corresponding elements from two lists into a list of pairs:
 
 ``` js
-F.zip([1, 2, 3], [4, 5, 6]) // [[1, 4], [2, 5], [3, 6]]
-F.zip('foo', 'bar') // [['f', 'b'], ['o', 'a'], ['o', 'r']]
+import { zip } from 'fkit'
+zip([1, 2, 3], [4, 5, 6]) // [[1, 4], [2, 5], [3, 6]]
+zip('foo', 'bar') // [['f', 'b'], ['o', 'a'], ['o', 'r']]
 ```
 
-`F.concatMap` maps a function that returns a list over every element in a list,
+`concatMap` maps a function that returns a list over every element in a list,
 and concatenates the results:
 
 ``` js
+import { concatMap } from 'fkit'
+
 function p(a) { return [a, 0] }
-F.concatMap(p, [1, 2, 3]) // [1, 0, 2, 0, 3, 0]
+concatMap(p, [1, 2, 3]) // [1, 0, 2, 0, 3, 0]
 
 function q(a) { return a + '-' }
-F.concatMap(q, 'foo') // 'f-o-o-'
+concatMap(q, 'foo') // 'f-o-o-'
 ```
 
 ## Immutable Objects
@@ -292,24 +307,26 @@ FKit provides several functions to make it easy to work with immutable objects.
 To begin the next example, let's define a list of shapes:
 
 ``` js
-var shapes = [
+const shapes = [
   {type: 'circle', colour: 'red', size: 1},
   {type: 'square', colour: 'green', size: 2},
   {type: 'triangle', colour: 'blue', size: 3}
 ]
 ```
 
-If we want to get the colour of each shape we can use the `F.get` function:
+If we want to get the colour of each shape we can use the `get` function:
 
 ``` js
-shapes.map(F.get('colour')) // ['red', 'green', 'blue']
+import { get } from 'fkit'
+shapes.map(get('colour')) // ['red', 'green', 'blue']
 ```
 
-What if we want to change a property of the shapes? We can use the `F.set`
+What if we want to change a property of the shapes? We can use the `set`
 function to do that:
 
 ``` js
-shapes.map(F.set('size', 100)) // [{..., size: 100}, {..., size: 100}, {..., size: 100}]
+import { set } from 'fkit'
+shapes.map(set('size', 100)) // [{..., size: 100}, {..., size: 100}, {..., size: 100}]
 ```
 
 Importantly, in the above example the original shapes remain unchanged. FKit
@@ -325,7 +342,7 @@ tip of the iceberg.
 
 I encourage you to take a look at the [FKit project on
 GitHub](https://github.com/nullobject/fkit) and read through the [API
-docs](http://nullobject.github.io/fkit/api.html) if you want to learn more.
+docs](https://fkit.joshbassett.info) if you want to learn more.
 
 ## Credits
 
