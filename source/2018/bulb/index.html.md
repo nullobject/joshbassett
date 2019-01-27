@@ -73,7 +73,7 @@ To express the above example as a reactive program with Bulb, we instead do the
 following:
 
 ```js
-import {Signal} from 'bulb'
+import { Signal } from 'bulb'
 
 Signal
   .periodic(1000)
@@ -127,7 +127,7 @@ To express the above example as a reactive program with Bulb, we instead do the
 following:
 
 ```js
-import {Signal} from 'bulb'
+import { Signal } from 'bulb'
 
 function findBook (isbn) {
   const url = `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`
@@ -139,8 +139,8 @@ const button = document.getElementById('search')
 const isbnValue = Signal.fromEvent('input', isbn).map(e => e.target.value)
 const buttonClick = Signal.fromEvent('click', search)
 
-buttonClick
-  .sample(isbnValue)
+isbnValue
+  .sample(buttonClick)
   .concatMap(findBook)
   .map(data => data.items[0].volumeInfo.title)
   .subscribe(console.log)
@@ -168,7 +168,7 @@ here](https://codepen.io/nullobject/pen/QarojE).
 Hopefully by now I have piqued your interest in Bulb and reactive programming
 in general. Please be sure to take a look at the [Bulb project on
 GitHub](https://github.com/nullobject/bulb) and read the [API
-docs](https://nullobject.github.com/bulb/api.html).
+docs](https://bulb.joshbassett.info).
 
 You may also want to do some more reading about reactive programming:
 
