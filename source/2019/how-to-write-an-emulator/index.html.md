@@ -1,5 +1,5 @@
 ---
-title: "How to Write an Emulator — Part 1"
+title: "How to Write an Arcade Emulator — Part 1"
 date: 2019-07-01
 ---
 
@@ -23,11 +23,34 @@ Unfortunately, I didn’t have an arcade machine to dissect, so I decided to do 
 
 The game I decided to write an emulator for is one of my all-time favourite arcade games: Rygar. It was originally built in 1986 by Tecmo, a Japanese video game company, and saw later releases on consoles like Nintendo Entertainment System, Sega Master System, Commodore 64, Atari Lynx, etc.
 
-<p class="text-center"><img src="images/rygar.png"></p>
-
 When we have a look at the raw computing power (e.g. CPU speed, memory, etc.) of the Rygar arcade machine hardware on paper, it isn't too dissimilar from what we would find running inside the video game consoles available at the time. But if we instead focus on the final product running on each platform – that is, the actual game itself – the difference is stark.
 
 How could such similar components (CPU, RAM, ROM, etc.) give rise to vastly different gaming experiences on the various platforms available at the time?
+
+<figure>
+  <img src="images/rygar-arcade.jpg">
+  <figcaption>Aracde</figcaption>
+</figure>
+
+<figure>
+  <img src="images/rygar-c64.jpg">
+  <figcaption>Commodore 64</figcaption>
+</figure>
+
+<figure>
+  <img src="images/rygar-nes.jpg">
+  <figcaption>Nintendo Entertainment System (NES)</figcaption>
+</figure>
+
+<figure>
+  <img src="images/rygar-sms.jpg">
+  <figcaption>Sega Master System (SMS)</figcaption>
+</figure>
+
+<figure>
+  <img src="images/rygar-lynx.jpg">
+  <figcaption>Atari Lynx</figcaption>
+</figure>
 
 The answer obviously lies in how those components were connected together, and what optimisations and trade-offs the engineers could make at the time. But to gain a deeper understanding, we have to dig further into the actual hardware.
 
@@ -41,7 +64,10 @@ The engineers couldn't design a general-purpose computer that could run a single
 
 Before we jump in and start writing an emulator, we need to gather as much information as we can about the game's original hardware design. The most important piece of information we can use is a _schematic diagram_ of the original arcade hardware. I say _original_ because bootleg versions of some popular games were developed illegally, and may contain slightly different hardware to the original.
 
-<p class="text-center"><img src="images/pcb.jpg"></p>
+<figure>
+  <img src="images/pcb.jpg">
+  <figcaption>Rygar Arcade Hardware</figcaption>
+</figure>
 
 A schematic diagram – or _schematic_ – is a technical drawing that depicts how all the different components of the arcade hardware are connected together. It’s typically a multi-page document, with each page representing a different subsystem. The main subsystems of an arcade machine are:
 
@@ -51,6 +77,12 @@ A schematic diagram – or _schematic_ – is a technical drawing that depicts 
 - Video output (CRT monitor driver)
 - Sound (SFX and music)
 - Input (joysticks, buttons, coin slots, dip switches, etc.)
+
+
+<figure>
+  <img src="images/rygar-schematic.jpg">
+  <figcaption>Rygar CPU Schematic </figcaption>
+</figure>
 
 To build an emulator, a general level of understanding of these subsystems is important, but thankfully we don't need to go all the way down to the individual component level of understanding for each subsystem.
 
@@ -63,3 +95,5 @@ If you want to learn about how each component functions, obviously you can, but 
 You can [run the emulator in your browser](https://rygar.joshbassett.info), or [check out the source code](http://github.com/nullobject/rygar).
 
 _In part two, we’ll take a closer look at how the CPU subsystem works and build it into our emulator._
+
+<p class="text-center"><img src="images/rygar-emu.png"></p>
