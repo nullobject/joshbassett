@@ -1,6 +1,6 @@
 ---
 title: "How to Write an Arcade Emulator — Part 1"
-date: 2019-07-01
+date: 2019-07-12
 ---
 
 ## Introduction
